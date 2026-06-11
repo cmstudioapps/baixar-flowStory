@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "ede19b58-31e9-49a5-b526-550209eb0151",
+      safari_web_id: "web.onesignal.auto.052f5ca9-1683-44c8-8c04-d88e94620413",
+      
+      // Desativa o ícone de sino flutuante para priorizar o modal
+      notifyButton: {
+        enable: false, 
+      },
+      
+      // Configuração do Modal (Slidedown Prompt) em PT-BR
+      promptOptions: {
+        slidedown: {
+          prompts: [
+            {
+              type: "push",
+              autoPrompt: true,
+              text: {
+                actionMessage: "Gostaria de receber notificações sobre as atualizações do app?",
+                acceptButton: "Sim, receber",
+                cancelButton: "Agora não"
+              },
+              delay: {
+                pageViews: 1,
+                timeDelay: 3 // Tempo de espera em segundos para o modal aparecer
+              }
+            }
+          ]
+        }
+      }
+    });
+  });
+</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
