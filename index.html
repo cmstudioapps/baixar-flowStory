@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowStory</title>
+    
+    <title>FlowStory | App para Ler e Criar Novelas (APK Android)</title>
+    <meta name="description" content="Baixe o FlowStory, o melhor aplicativo gratuito para Android onde você pode ler novelas envolventes e escrever suas próprias histórias. Mergulhe na leitura ou seja o autor!">
+    <meta name="keywords" content="ler novelas, escrever novelas, aplicativo de leitura, criar histórias, apk novelas, livros online, app para escritores, FlowStory">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="FlowStory | Leia e Crie Novelas Incríveis">
+    <meta property="og:description" content="Mergulhe em histórias que te prendem ou escreva a sua própria novela. Baixe o APK grátis para Android.">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         /* Reset e Configurações Globais */
         * {
@@ -53,7 +62,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Gradiente de escurecimento forte vindo do fundo/baixo */
             background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 70%);
             z-index: 1;
         }
@@ -65,7 +73,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 30px 60px 30px; /* Espaçamento inferior e lateral */
+            padding: 0 30px 60px 30px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -149,7 +157,7 @@
             }
 
             .main-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .subtitle {
@@ -181,29 +189,25 @@
 </head>
 <body>
 
-    <div class="landing-container">
-        <!-- IMAGEM DE FUNDO: Substitua o 'src' pelo caminho da sua imagem -->
-        <img src="./banner.png" alt="Background Cinema" class="bg-image" id="bg-img">
+    <main class="landing-container">
         
-        <!-- Overlay para escurecer e destacar o texto -->
+        <img src="./banner.png" alt="Aplicativo FlowStory para ler e escrever novelas no celular" class="bg-image" id="bg-img">
+        
         <div class="overlay"></div>
 
         <div class="content-wrapper">
-            <div class="text-content">
-                <span class="novelas-tag">NOVELAS</span>
+            <header class="text-content">
+                <span class="novelas-tag">LEIA E CRIE NOVELAS</span>
                 <h1 class="main-title">
                     Histórias que<br>
                     te prendem.
                 </h1>
                 <p class="subtitle">
-                    Leia novelas envolventes<br>
-                    onde e quando quiser.
+                    Mergulhe em novelas envolventes ou libere sua criatividade escrevendo suas próprias histórias. Onde e quando quiser.
                 </p>
-            </div>
+            </header>
 
-            <!-- BOTÃO COM LINK VAZIO -->
-            <a href="https://www.mediafire.com/file/4nlmguidiyn7wel/com.html2apk.flowstory-1.3.6.apk/file" class="btn-apk">
-                <!-- Ícone SVG do Android (estilo aproximado) -->
+            <a href="https://www.mediafire.com/file/4nlmguidiyn7wel/com.html2apk.flowstory-1.3.6.apk/file" class="btn-apk" title="Baixar APK do FlowStory para Android">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M380.9 256.1c0-28.8 23.4-52.2 52.2-52.2s52.2 23.4 52.2 52.2-23.4 52.2-52.2 52.2-52.2-23.4-52.2-52.2zm-304.6 0c0-28.8 23.4-52.2 52.2-52.2s52.2 23.4 52.2 52.2-23.4 52.2-52.2 52.2-52.2-23.4-52.2-52.2zM345.7 359.9c-35.2 35.2-82.8 54.6-133.4 54.6-50.6 0-98.2-19.4-133.4-54.6l-50.9 50.9C76.1 439.3 147.1 480 228.6 480h.8c81.5 0 152.5-40.7 200.6-104.7l-50.9-50.9c-13 13-25.9 25.9-33.4 35.5z"/>
                 </svg>
@@ -212,7 +216,7 @@
 
             <p class="footer-note">Disponível apenas para Android</p>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
