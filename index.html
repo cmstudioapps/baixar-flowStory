@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Novels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0c0c;
+            color: #ffffff;
+            overflow: hidden; /* Evita scrollbars indesejadas */
+        }
+
+        /* Container Principal */
+        .landing-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* Imagem de Fundo */
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Overlay Escura para garantir legibilidade */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Gradiente de escurecimento forte vindo do fundo/baixo */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 70%);
+            z-index: 1;
+        }
+
+        /* Conteúdo de Texto e Botão */
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 60px 30px; /* Espaçamento inferior e lateral */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        /* Estilo do Texto */
+        .text-content {
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .novelas-tag {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #ff4d00;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        /* Estilo do Botão */
+        .btn-apk {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #ff4d00;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 18px 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 360px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-apk:hover {
+            background-color: #e64400;
+            transform: scale(1.02);
+        }
+
+        .btn-apk svg {
+            width: 28px;
+            height: 28px;
+            fill: #ffffff;
+        }
+
+        /* Legenda do botão */
+        .footer-note {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+            font-weight: 400;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 0 20px 40px 20px;
+            }
+
+            .main-title {
+                font-size: 2.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .btn-apk {
+                font-size: 1rem;
+                padding: 16px 20px;
+                max-width: 100%;
+            }
+
+            .btn-apk svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .novelas-tag {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <!-- IMAGEM DE FUNDO: Substitua o 'src' pelo caminho da sua imagem -->
+        <img src="./banner.png" alt="Background Cinema" class="bg-image" id="bg-img">
+        
+        <!-- Overlay para escurecer e destacar o texto -->
+        <div class="overlay"></div>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <span class="novelas-tag">NOVELAS</span>
+                <h1 class="main-title">
+                    Histórias que<br>
+                    te prendem.
+                </h1>
+                <p class="subtitle">
+                    Leia novelas envolventes<br>
+                    onde e quando quiser.
+                </p>
+            </div>
+
+            <!-- BOTÃO COM LINK VAZIO -->
+            <a href="#" class="btn-apk">
+                <!-- Ícone SVG do Android (estilo aproximado) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M380.9 256.1c0-28.8 23.4-52.2 52.2-52.2s52.2 23.4 52.2 52.2-23.4 52.2-52.2 52.2-52.2-23.4-52.2-52.2zm-304.6 0c0-28.8 23.4-52.2 52.2-52.2s52.2 23.4 52.2 52.2-23.4 52.2-52.2 52.2-52.2-23.4-52.2-52.2zM345.7 359.9c-35.2 35.2-82.8 54.6-133.4 54.6-50.6 0-98.2-19.4-133.4-54.6l-50.9 50.9C76.1 439.3 147.1 480 228.6 480h.8c81.5 0 152.5-40.7 200.6-104.7l-50.9-50.9c-13 13-25.9 25.9-33.4 35.5z"/>
+                </svg>
+                Baixar APK
+            </a>
+
+            <p class="footer-note">Disponível apenas para Android</p>
+        </div>
+    </div>
+
+</body>
+</html>
